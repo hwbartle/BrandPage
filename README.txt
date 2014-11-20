@@ -14,7 +14,7 @@ Due to the fact that the site was hosted on shopify, certian elements will not w
 
 
 If you would like to see a fully formed version of the site included, here is the uploaded version.
-Be advised, this is running an older version of the code with was laid out more explicitly
+Be advised, this is running an older version of the code which was laid out more explicitly
 http://www.broquet.co/pages/newbrands
 
 
