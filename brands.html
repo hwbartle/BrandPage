@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+
+<link href="//cdn.shopify.com/s/files/1/0136/2242/t/68/assets/stylesheet.css?55795" rel="stylesheet" type="text/css"  media="all"  />
+<link href="//cdn.shopify.com/s/files/1/0136/2242/t/68/assets/font.css?55795" rel="stylesheet" type="text/css"  media="all"  />
+
+<script src="http://cdn.jquerytools.org/1.2.6/full/jquery.tools.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" type="text/javascript"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js" type="text/javascript"></script>
+<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/le-frog/jquery-ui.css" rel="stylesheet" type="text/css" media="screen">
+
+<link href="style.css" rel="stylesheet" type="text/css"  media="all"  />
+
+<script type="text/javascript">
+
+var brandList = new Array();
+
+/*
+Brand Object
+Takes in the python generated code to create objects specific to each brand
+int idx: Used to quickly index through the list of brands
+String brandName: Name of Brand
+String brandDesc: Description of Brand
+String brandLoc: location of Brand
+String brandSite: website of Brand
+List catagoryList: list containing the catagories brand is included in
+List productNames: list of names of the products brand sells
+List productUrls: contains urls of product store page
+List productList: contains urls of the product picture
+
+*/
+function Brand (idx, bName, desc, loc, site, cata, products, producturls, productpics) {
+	this.index = idx;	
+	this.brandName = bName;
+	this.brandDesc = desc;
+	this.brandLoc = loc;
+	this.brandSite = site;	
+	this.catagoryList = cata;
+	this.productNames = products;
+	this.productUrls = producturls;
+	this.productList = productpics;
+	brandList.push(this);
+}
+
+
+//Function to determine if element is in list
+function contains(a, obj) {
+    var i = a.length;
+    while (i--) {
+       if (a[i] === obj) {
+           return true;
+       }
+    }
+    return false;
+}
+
+
+
+//Brand Objects go here! PASTE CODE BELOW THIS LINE
+//THIS CODE IS COMPUTER GENERATED:
+
+//33 BooksBrand Code:
+var outArray0= new Array('Hot Sauce Tasting Set');
+var outURLArray0= new Array('http://www.broquet.co/products/the-fire-breather');
+var outPICArray0= new Array('http://cdn.shopify.com/s/files/1/0136/2242/products/HotSauceNew_large.jpg?v=1392499868');
+var genBrandVal0 = new Brand('0','33 Books','Tasting Notebooks','Portland OR','33books.com',['Food'], outArray0, outURLArray0, outPICArray0);
+
+//AeropressBrand Code:
+var outArray1= new Array('Coffee');
+var outURLArray1= new Array('http://www.broquet.co/products/coffee-tasting-kit');
+var outPICArray1= new Array('http://cdn.shopify.com/s/files/1/0136/2242/products/CoffeeTasting1_25531552-f79d-4507-86e6-9f383f79337c_large.jpg?v=1407893320');
+var genBrandVal1 = new Brand('1','Aeropress','Coffee','Waterville ME','aeropress.com',['Food'], outArray1, outURLArray1, outPICArray1);
+
+//Bacon Hot SauceBrand Code:
+var outArray2= new Array('Bacon Six Ways');
+var outURLArray2= new Array('http://www.broquet.co/products/thesmokehouse');
+var outPICArray2= new Array('http://cdn.shopify.com/s/files/1/0136/2242/products/Bacon1_large.jpg?v=1373654090');
+var genBrandVal2 = new Brand('2','Bacon Hot Sauce','Hot Sauce (with bacon)','San Francisco CA','baconhotsauce.com',['Food'], outArray2, outURLArray2, outPICArray2);
+
+//BeardbrandBrand Code:
+var outArray3= new Array('Beard Maintenance Kit');
+var outURLArray3= new Array('http://www.broquet.co/products/beard-maintenance-kit');
+var outPICArray3= new Array('http://cdn.shopify.com/s/files/1/0136/2242/products/BeardsmanMain_large.jpg?v=1399612060');
+var genBrandVal3 = new Brand('3','Beardbrand','Beard Care','Spokane  WA','beardbrand.com',['Groom'], outArray3, outURLArray3, outPICArray3);
+
+//Bearded BrothersBrand Code:
+var outArray4= new Array('Coffee');
+var outURLArray4= new Array('http://www.broquet.co/products/coffee-tasting-kit');
+var outPICArray4= new Array('http://cdn.shopify.com/s/files/1/0136/2242/products/CoffeeTasting1_25531552-f79d-4507-86e6-9f383f79337c_large.jpg?v=1407893320');
+var genBrandVal4 = new Brand('4','Bearded Brothers','Coffee','Waterville ME','google.com',['Food'], outArray4, outURLArray4, outPICArray4);
+
+//BlowfishBrand Code:
+var outArray5= new Array('Hangover First Aid Kit');
+var outURLArray5= new Array('http://www.broquet.co/products/the-all-nighter');
+var outPICArray5= new Array('http://cdn.shopify.com/s/files/1/0136/2242/products/Hangover1_large.jpg?v=1373653616');
+var genBrandVal5 = new Brand('5','Blowfish','Hangover Tablet','New York NY','forhangovers.com',['Drink'], outArray5, outURLArray5, outPICArray5);
+
+//California RancherBrand Code:
+var outArray6= new Array('California Tri Tip Grill Set');
+var outURLArray6= new Array('http://www.broquet.co/products/the-santa-maria');
+var outPICArray6= new Array('http://cdn.shopify.com/s/files/1/0136/2242/products/SantaMaria1_large.jpg?v=1374690047');
+var genBrandVal6 = new Brand('6','California Rancher','Grilling Supplies','El Segundo CA','california-rancher.com',['Food'], outArray6, outURLArray6, outPICArray6);
+
+//ChiefsBrand Code:
+var outArray7= new Array('Dopp Kit');
+var outURLArray7= new Array('http://www.broquet.co/products/dopp-kit');
+var outPICArray7= new Array('http://cdn.shopify.com/s/files/1/0136/2242/products/GeneralIssueNew_large.jpg?v=1392499725');
+var genBrandVal7 = new Brand('7','Chiefs','Face Care Products','Waterville ME','chiefsformen.com',['Groom'], outArray7, outURLArray7, outPICArray7);
+
+//Clancy\'s FancyBrand Code:
+var outArray8= new Array('Hot Sauce Tasting Set');
+var outURLArray8= new Array('http://www.broquet.co/products/the-fire-breather');
+var outPICArray8= new Array('http://cdn.shopify.com/s/files/1/0136/2242/products/HotSauceNew_large.jpg?v=1392499868');
+var genBrandVal8 = new Brand('8','Clancy\'s Fancy','Hot Sauce','Ann Arbor MI','clancysfancy.com',['Food'], outArray8, outURLArray8, outPICArray8);
+
+//DoublekickBrand Code:
+var outArray9= new Array('Hot Sauce Tasting Set');
+var outURLArray9= new Array('http://www.broquet.co/products/the-fire-breather');
+var outPICArray9= new Array('http://cdn.shopify.com/s/files/1/0136/2242/products/HotSauceNew_large.jpg?v=1392499868');
+var genBrandVal9 = new Brand('9','Doublekick','Chili Sauce','Los Angeles  CA','doublekicksauce.com',['Food'], outArray9, outURLArray9, outPICArray9);
+
+//DrinkwelBrand Code:
+var outArray10= new Array('Hangover First Aid Kit');
+var outURLArray10= new Array('http://www.broquet.co/products/the-all-nighter');
+var outPICArray10= new Array('http://cdn.shopify.com/s/files/1/0136/2242/products/Hangover1_large.jpg?v=1373653616');
+var genBrandVal10 = new Brand('10','Drinkwel','Drinking Multi-vitamins','Irvine CA','drinkwel.com',['Drink'], outArray10, outURLArray10, outPICArray10);
+
+//Duke CannonBrand Code:
+var outArray11= new Array('Dopp Kit');
+var outURLArray11= new Array('http://www.broquet.co/products/dopp-kit');
+var outPICArray11= new Array('http://cdn.shopify.com/s/files/1/0136/2242/products/GeneralIssueNew_large.jpg?v=1392499725');
+var genBrandVal11 = new Brand('11','Duke Cannon','Soap for Men','Waterville ME','dukecannon.com',['Groom'], outArray11, outURLArray11, outPICArray11);
+
+//EBoostBrand Code:
+var outArray12= new Array('Hangover First Aid Kit');
+var outURLArray12= new Array('http://www.broquet.co/products/the-all-nighter');
+var outPICArray12= new Array('http://cdn.shopify.com/s/files/1/0136/2242/products/Hangover1_large.jpg?v=1373653616');
+var genBrandVal12 = new Brand('12','EBoost','Natural Energy Supplement','New York NY','eboost.com',['Drink'], outArray12, outURLArray12, outPICArray12);
+
+//Fox RunBrand Code:
+var outArray13= new Array('Whiskey Sour Cocktail Set','Moscow Mule Cocktail Set','Old Fashioned Cocktail Set','BBQ Ribs Grill Set','California Tri Tip Grill Set','Essential Grill Set');
+var outURLArray13= new Array('http://www.broquet.co/products/whiskey-sour-cocktail-set','http://www.broquet.co/products/moscow-mule-cocktail-set','http://www.broquet.co/products/the-gentleman-and-scholar','http://www.broquet.co/products/the-apple-wood','http://www.broquet.co/products/the-santa-maria','http://www.broquet.co/products/the-medium-rare');
+var outPICArray13= new Array('http://cdn.shopify.com/s/files/1/0136/2242/products/WhiskeySourMainShot2_large.jpg?v=1404098909','http://cdn.shopify.com/s/files/1/0136/2242/products/MuleMainShot2_large.jpg?v=1404092167','http://cdn.shopify.com/s/files/1/0136/2242/products/OldFashioned_large.jpg?v=1392967521','http://cdn.shopify.com/s/files/1/0136/2242/products/AppleWood1_large.jpg?v=1374689970','http://cdn.shopify.com/s/files/1/0136/2242/products/SantaMaria1_large.jpg?v=1374690047','http://cdn.shopify.com/s/files/1/0136/2242/products/MediumRare1_large.jpg?v=1374690019');
+var genBrandVal13 = new Brand('13','Fox Run','Cocktail Shakers','Ivyland PA','foxrunbrands.com',['Drink', 'Drink', 'Drink', 'Food', 'Food', 'Food', 'General'], outArray13, outURLArray13, outPICArray13);
+
+//GranoloveBrand Code:
+var outArray14= new Array('Coffee');
+var outURLArray14= new Array('http://www.broquet.co/products/coffee-tasting-kit');
+var outPICArray14= new Array('http://cdn.shopify.com/s/files/1/0136/2242/products/CoffeeTasting1_25531552-f79d-4507-86e6-9f383f79337c_large.jpg?v=1407893320');
+var genBrandVal14 = new Brand('14','Granolove','Coffee','Waterville ME','google.com',['Food'], outArray14, outURLArray14, outPICArray14);
+
+//Hank SauceBrand Code:
+var outArray15= new Array('Hot Sauce Tasting Set');
+var outURLArray15= new Array('http://www.broquet.co/products/the-fire-breather');
+var outPICArray15= new Array('http://cdn.shopify.com/s/files/1/0136/2242/products/HotSauceNew_large.jpg?v=1392499868');
+var genBrandVal15 = new Brand('15','Hank Sauce','Hot Sauce','Sea Isle City NJ','hanksauce.com',['Food'], outArray15, outURLArray15, outPICArray15);
+
+//Hella BitterBrand Code:
+var outArray16= new Array('Old Fashioned Cocktail Set');
+var outURLArray16= new Array('http://www.broquet.co/products/the-gentleman-and-scholar');
+var outPICArray16= new Array('http://cdn.shopify.com/s/files/1/0136/2242/products/OldFashioned_large.jpg?v=1392967521');
+var genBrandVal16 = new Brand('16','Hella Bitter','Bitters','Brooklyn  NY','hellabitters.com',['Drink'], outArray16, outURLArray16, outPICArray16);
+
+//Imperial Barber ProductsBrand Code:
+var outArray17= new Array('Straight Razor Shaving Kit','Safety Razor Shaving Kit');
+var outURLArray17= new Array('http://www.broquet.co/products/the-frontiersman','http://www.broquet.co/products/the-colonial');
+var outPICArray17= new Array('http://cdn.shopify.com/s/files/1/0136/2242/products/ImperialStraight1_large.jpg?v=1381510009','http://cdn.shopify.com/s/files/1/0136/2242/products/ImperialSafety1_large.jpg?v=1381509963');
+var genBrandVal17 = new Brand('17','Imperial Barber Products','Shaving Lotion and Cream','Los Angeles  CA','imperialbarberproducts.com',['Groom', 'Groom'], outArray17, outURLArray17, outPICArray17);
+
+//J&D\'sBrand Code:
+var outArray18= new Array('Bacon Six Ways');
+var outURLArray18= new Array('http://www.broquet.co/products/thesmokehouse');
+var outPICArray18= new Array('http://cdn.shopify.com/s/files/1/0136/2242/products/Bacon1_large.jpg?v=1373654090');
+var genBrandVal18 = new Brand('18','J&D\'s','Bacon Products','Seattle  WA','jdfoods.net',['Food'], outArray18, outURLArray18, outPICArray18);
+
+//Just CoffeeBrand Code:
+var outArray19= new Array('Coffee');
+var outURLArray19= new Array('http://www.broquet.co/products/coffee-tasting-kit');
+var outPICArray19= new Array('http://cdn.shopify.com/s/files/1/0136/2242/products/CoffeeTasting1_25531552-f79d-4507-86e6-9f383f79337c_large.jpg?v=1407893320');
+var genBrandVal19 = new Brand('19','Just Coffee','Coffee','Waterville ME','google.com',['Food'], outArray19, outURLArray19, outPICArray19);
+
+//Larry\'s Bag of SmokeBrand Code:
+var outArray20= new Array('California Tri Tip Grill Set');
+var outURLArray20= new Array('http://www.broquet.co/products/the-santa-maria');
+var outPICArray20= new Array('http://cdn.shopify.com/s/files/1/0136/2242/products/SantaMaria1_large.jpg?v=1374690047');
+var genBrandVal20 = new Brand('20','Larry\'s Bag of Smoke','BBQ Wood Chips','Katy TX','google.com',['Food'], outArray20, outURLArray20, outPICArray20);
+
+//Libbey VibeBrand Code:
+var outArray21= new Array('Old Fashioned Cocktail Set');
+var outURLArray21= new Array('http://www.broquet.co/products/the-gentleman-and-scholar');
+var outPICArray21= new Array('http://cdn.shopify.com/s/files/1/0136/2242/products/OldFashioned_large.jpg?v=1392967521');
+var genBrandVal21 = new Brand('21','Libbey Vibe','Glassware','Toledo  OH','retail.libbey.com',['Drink'], outArray21, outURLArray21, outPICArray21);
+
+//Lucky\'s Hot SauceBrand Code:
+var outArray22= new Array('Hot Sauce Tasting Set');
+var outURLArray22= new Array('http://www.broquet.co/products/the-fire-breather');
+var outPICArray22= new Array('http://cdn.shopify.com/s/files/1/0136/2242/products/HotSauceNew_large.jpg?v=1392499868');
+var genBrandVal22 = new Brand('22','Lucky\'s Hot Sauce','Hot Sauce','Mankato MN','luckyspopcorndressing.com',['Food'], outArray22, outURLArray22, outPICArray22);
+
+//Man\'s Face StuffBrand Code:
+var outArray23= new Array('Moustache Maintenance Kit');
+var outURLArray23= new Array('http://www.broquet.co/products/theroughrider');
+var outPICArray23= new Array('http://cdn.shopify.com/s/files/1/0136/2242/products/RoughRiderNew_large.jpg?v=1380923612');
+var genBrandVal23 = new Brand('23','Man\'s Face Stuff','Stuff for the Face','Portland OR','mansfacestuff.com',['Groom'], outArray23, outURLArray23, outPICArray23);
+
+//McClure\'sBrand Code:
+var outArray24= new Array('Pickleback');
+var outURLArray24= new Array('http://www.broquet.co/products/the-pickleback');
+var outPICArray24= new Array('http://cdn.shopify.com/s/files/1/0136/2242/products/Pickleback2_large.jpg?v=1381770996');
+var genBrandVal24 = new Brand('24','McClure\'s','Spicy Pickles','Detroit MI','mcclurespickles.com',['Drink'], outArray24, outURLArray24, outPICArray24);
+
+//MercyBrand Code:
+var outArray25= new Array('Hangover First Aid Kit');
+var outURLArray25= new Array('http://www.broquet.co/products/the-all-nighter');
+var outPICArray25= new Array('http://cdn.shopify.com/s/files/1/0136/2242/products/Hangover1_large.jpg?v=1373653616');
+var genBrandVal25 = new Brand('25','Mercy','Hangover Prevention Drink','New York NY','drinkmercy.com',['Drink'], outArray25, outURLArray25, outPICArray25);
+
+//MeriwetherBrand Code:
+var outArray26= new Array('Mounted Bottle Opener','Wood Six Pack Carrier','Wood Wine Bottle Carrier');
+var outURLArray26= new Array('http://www.broquet.co/products/meriwether-mounted-bottle-opener','http://www.broquet.co/products/meriwether-six-pack-carrier','http://www.broquet.co/products/meriwether-wine-bottle-carrier');
+var outPICArray26= new Array('http://cdn.shopify.com/s/files/1/0136/2242/products/MeriweatherBottleOpener_large.jpg?v=1396327705','http://cdn.shopify.com/s/files/1/0136/2242/products/WoodSixPack_large.jpg?v=1411019660','http://cdn.shopify.com/s/files/1/0136/2242/products/MeriweatherWineCarrier_large.jpg?v=1396321699');
+var genBrandVal26 = new Brand('26','Meriwether','Crafted Wood Products','Whitefish MT','mwmade.com',['Drink', 'Drink', 'Drink'], outArray26, outURLArray26, outPICArray26);
+
+//Morris KitchenBrand Code:
+var outArray27= new Array('Whiskey Sour Cocktail Set');
+var outURLArray27= new Array('http://www.broquet.co/products/whiskey-sour-cocktail-set');
+var outPICArray27= new Array('http://cdn.shopify.com/s/files/1/0136/2242/products/WhiskeySourMainShot2_large.jpg?v=1404098909');
+var genBrandVal27 = new Brand('27','Morris Kitchen','Ginger Syrup','New York NY','morriskitchen.com',['Drink'], outArray27, outURLArray27, outPICArray27);
+
+//Morris KitchenBrand Code:
+var outArray28= new Array('Moscow Mule Cocktail Set');
+var outURLArray28= new Array('http://www.broquet.co/products/moscow-mule-cocktail-set');
+var outPICArray28= new Array('http://cdn.shopify.com/s/files/1/0136/2242/products/MuleMainShot2_large.jpg?v=1404092167');
+var genBrandVal28 = new Brand('28','Morris Kitchen','','','',['Drink'], outArray28, outURLArray28, outPICArray28);
+
+//NicheBrand Code:
+var outArray29= new Array('Hangover First Aid Kit');
+var outURLArray29= new Array('http://www.broquet.co/products/the-all-nighter');
+var outPICArray29= new Array('http://cdn.shopify.com/s/files/1/0136/2242/products/Hangover1_large.jpg?v=1373653616');
+var genBrandVal29 = new Brand('29','Niche','Deodorizing Wipes','Palm Beach Gardens FL','nicheformen.com',['Drink'], outArray29, outURLArray29, outPICArray29);
+
+//Parker RazorsBrand Code:
+var outArray30= new Array('Straight Razor Shaving Kit','Safety Razor Shaving Kit');
+var outURLArray30= new Array('http://www.broquet.co/products/the-frontiersman','http://www.broquet.co/products/the-colonial');
+var outPICArray30= new Array('http://cdn.shopify.com/s/files/1/0136/2242/products/ImperialStraight1_large.jpg?v=1381510009','http://cdn.shopify.com/s/files/1/0136/2242/products/ImperialSafety1_large.jpg?v=1381509963');
+var genBrandVal30 = new Brand('30','Parker Razors','Razors','Yorktown Heights NY','parkershaving.com',['Groom', 'Groom'], outArray30, outURLArray30, outPICArray30);
+
+//RothcoBrand Code:
+var outArray31= new Array('Dopp Kit');
+var outURLArray31= new Array('http://www.broquet.co/products/dopp-kit');
+var outPICArray31= new Array('http://cdn.shopify.com/s/files/1/0136/2242/products/GeneralIssueNew_large.jpg?v=1392499725');
+var genBrandVal31 = new Brand('31','Rothco','Military Bags','Waterville ME','rothco.com',['Groom'], outArray31, outURLArray31, outPICArray31);
+
+//Rufus TeagueBrand Code:
+var outArray32= new Array('BBQ Ribs Grill Set');
+var outURLArray32= new Array('http://www.broquet.co/products/the-apple-wood');
+var outPICArray32= new Array('http://cdn.shopify.com/s/files/1/0136/2242/products/AppleWood1_large.jpg?v=1374689970');
+var genBrandVal32 = new Brand('32','Rufus Teague','BBQ Sauce','Shawnee  KS','rufusteague.com',['Food'], outArray32, outURLArray32, outPICArray32);
+
+//Sir Francis BaconBrand Code:
+var outArray33= new Array('Bacon Six Ways');
+var outURLArray33= new Array('http://www.broquet.co/products/thesmokehouse');
+var outPICArray33= new Array('http://cdn.shopify.com/s/files/1/0136/2242/products/Bacon1_large.jpg?v=1373654090');
+var genBrandVal33 = new Brand('33','Sir Francis Bacon','Bacon Confectionary','Atlanta GA','baconpeanutbrittle.com',['Food'], outArray33, outURLArray33, outPICArray33);
+
+//Solid Copper MugsBrand Code:
+var outArray34= new Array('Moscow Mule Cocktail Set');
+var outURLArray34= new Array('http://www.broquet.co/products/moscow-mule-cocktail-set');
+var outPICArray34= new Array('http://cdn.shopify.com/s/files/1/0136/2242/products/MuleMainShot2_large.jpg?v=1404092167');
+var genBrandVal34 = new Brand('34','Solid Copper Mugs','Copper Drinking Assistance','Boston  MA','gomoscowmule.com',['Drink'], outArray34, outURLArray34, outPICArray34);
+
+//Tenkara Rod Co.Brand Code:
+var outArray35= new Array('Tenkara Fly Rod Set');
+var outURLArray35= new Array('http://www.broquet.co/products/tenkara-fly-rod');
+var outPICArray35= new Array('http://cdn.shopify.com/s/files/1/0136/2242/products/TenkaraFlyRod_large.jpg?v=1394131560');
+var genBrandVal35 = new Brand('35','Tenkara Rod Co.','Fishing Gear','Driggs ID','tenkararodco.com',['Out'], outArray35, outURLArray35, outPICArray35);
+
+//The Salt LickBrand Code:
+var outArray36= new Array('Essential Grill Set');
+var outURLArray36= new Array('http://www.broquet.co/products/the-medium-rare');
+var outPICArray36= new Array('http://cdn.shopify.com/s/files/1/0136/2242/products/MediumRare1_large.jpg?v=1374690019');
+var genBrandVal36 = new Brand('36','The Salt Lick','Grilling Supplies','Austin TX','google.com',['Food'], outArray36, outURLArray36, outPICArray36);
+
+//Tin MustardBrand Code:
+var outArray37= new Array('BBQ Ribs Grill Set');
+var outURLArray37= new Array('http://www.broquet.co/products/the-apple-wood');
+var outPICArray37= new Array('http://cdn.shopify.com/s/files/1/0136/2242/products/AppleWood1_large.jpg?v=1374689970');
+var genBrandVal37 = new Brand('37','Tin Mustard','Gourmet Mustard','New York NY','tinmustard.com',['Food'], outArray37, outURLArray37, outPICArray37);
+
+//TovoloBrand Code:
+var outArray38= new Array('Old Fashioned Cocktail Set');
+var outURLArray38= new Array('http://www.broquet.co/products/the-gentleman-and-scholar');
+var outPICArray38= new Array('http://cdn.shopify.com/s/files/1/0136/2242/products/OldFashioned_large.jpg?v=1392967521');
+var genBrandVal38 = new Brand('38','Tovolo','Ice Molds','Seattle  WA','tovolo.com',['Drink'], outArray38, outURLArray38, outPICArray38);
+
+//Trail\'s BestBrand Code:
+var outArray39= new Array('Bacon Six Ways');
+var outURLArray39= new Array('http://www.broquet.co/products/thesmokehouse');
+var outPICArray39= new Array('http://cdn.shopify.com/s/files/1/0136/2242/products/Bacon1_large.jpg?v=1373654090');
+var genBrandVal39 = new Brand('39','Trail\'s Best','Bacon Jerky','Memphis TN','trailsbest.com',['Food'], outArray39, outURLArray39, outPICArray39);
+
+//TweezermanBrand Code:
+var outArray40= new Array('Moustache Maintenance Kit');
+var outURLArray40= new Array('http://www.broquet.co/products/theroughrider');
+var outPICArray40= new Array('http://cdn.shopify.com/s/files/1/0136/2242/products/RoughRiderNew_large.jpg?v=1380923612');
+var genBrandVal40 = new Brand('40','Tweezerman','Grooming Supplies','Port Washington NY','tweezerman.com',['Groom'], outArray40, outURLArray40, outPICArray40);
+
+//VosgesBrand Code:
+var outArray41= new Array('Bacon Six Ways');
+var outURLArray41= new Array('http://www.broquet.co/products/thesmokehouse');
+var outPICArray41= new Array('http://cdn.shopify.com/s/files/1/0136/2242/products/Bacon1_large.jpg?v=1373654090');
+var genBrandVal41 = new Brand('41','Vosges','Chocolate with Bacon','Beverly Hills CA','vosgeschocolate.com',['Food'], outArray41, outURLArray41, outPICArray41);
+
+//Waterfront Ale HouseBrand Code:
+var outArray42= new Array('Hot Sauce Tasting Set');
+var outURLArray42= new Array('http://www.broquet.co/products/the-fire-breather');
+var outPICArray42= new Array('http://cdn.shopify.com/s/files/1/0136/2242/products/HotSauceNew_large.jpg?v=1392499868');
+var genBrandVal42 = new Brand('42','Waterfront Ale House','Hot Sauce','New York NY','waterfrontalehouse.com',['Food'], outArray42, outURLArray42, outPICArray42);
+
+
+
+
+
+//PASTED CODE GOES ABOVE HERE
+
+//Arrays to hold specific brands
+//list of brands with food products:
+var foodList = new Array();
+//list of brands with food products:
+var groomList = new Array();
+//list of brands with drink products:
+var drinkList = new Array();
+//list of brands with outdoor products:
+var outList = new Array();
+//list of brands with general store products:
+var genList = new Array();
+
+
+//Sort each brand into the correct arrays
+//Brands can be in multiple lists
+brandList.forEach(function(entry) {
+	if (contains(entry.catagoryList, "Food") == true){
+		foodList.push(entry);		
+	}
+	if (contains(entry.catagoryList, "Drink") == true){
+		drinkList.push(entry);		
+	}
+	if (contains(entry.catagoryList, "Groom") == true){
+		groomList.push(entry);		
+	}
+	if (contains(entry.catagoryList, "Out") == true){
+		outList.push(entry);		
+	}
+	if (contains(entry.catagoryList, "General") == true){
+		genList.push(entry);		
+	}
+});
+
+
+/*
+Function to set the default values for the catagoreis when clicked
+Changes the HTML to default values
+*/
+function setDefault(type){
+	document.getElementById("listProductList").innerHTML = "";
+	if(type == "allList"){
+		changeInformation( "Our Vendors", "We scour the country for sweet brands that make everything from portable bacon to titanium sporks.", " Interested in becoming a partner? Talk to Max. <a href='mailto:max@broquet.co'>[max@broquet.co]</a>", "");
+		changePicture("defualt","//cdn.shopify.com/s/files/1/0136/2242/t/68/assets/shop-box.png?55838");
+	}
+	if(type == "foodList"){
+		changeInformation( "Man Food and Grilling", "Here’s to bacon-wrapped bacon. Here’s to knowing the difference between medium and medium rare. Here’s to never learning how to pronounce “quinoa”.", "Our Man Food shop features bacon chocolate, bourbon maple barbecue sauce, and everything in between.", "");
+		changePicture("defualt","//cdn.shopify.com/s/files/1/0136/2242/t/68/assets/GrillingDogShop.jpg?55856");
+	}
+	if(type == "drinkList"){
+		changeInformation( "Drinking Gear", "Do you know a guy who’s ordered a vodka cranberry at any point in the last 6 months? How about one that when presented with the option, would select a Bud Light Lime over a classic Bud Heavy?", "It’s time to have an intervention. Or better yet, let one of our manly cocktail Broquets do the talking.", "");
+		changePicture("defualt","//cdn.shopify.com/s/files/1/0136/2242/t/68/assets/CocktailShop.jpg?55856");
+	}
+	if(type == "outList"){
+		changeInformation( "Outdoors and Tools", "Some guys like to get out in the wilderness, throw their phone in the creek, and forget how to talk to other humans for a while. Some guys like to spend 12 hours straight in their garage trying to build a functioning trebuchet out of old 2x4’s and scrap metal.", "Whatever he’s in to, we’ve got the outdoor supplies, tools, and sports gear to up his game.", "");
+		changePicture("defualt","//cdn.shopify.com/s/files/1/0136/2242/t/68/assets/WoodChoppingShop.jpg?55856");
+	}
+	if(type == "groomList"){
+		changeInformation( "Grooming and Accessories", "If you’re looking for a 12-blade vibrating razor or a fancy little lapel flower, you’ll probably want to turn around now.", "Our Gentleman’s Shop ditches the over-featured, over-styled stuff in favor of American made grooming gear and accessories that are high quality, expertly designed and just work. Check out one of our Broquets, or grab some sweet accessories or grooming supplies on their own.", "");
+		changePicture("defualt","//cdn.shopify.com/s/files/1/0136/2242/t/68/assets/AxeShavingShop.jpg?55856");
+	}
+	
+	if(type == "genList"){
+		changeInformation( "The General Store", "We love the brands we work with, so we wanted to individually highlight some of our favorite products. Here you can find a wide assortment of awesomeness, ranging from axes to wallets to cocktail kits.", "Whatever you choose, we know he'll be stoked to receive it.");
+		changePicture("defualt","//cdn.shopify.com/s/files/1/0136/2242/t/68/assets/GeneralStore.jpg?56073");
+	}
+}
+
+
+
+
+
+
+/*
+Method to display the desired list based on the button clicks
+each displayed company can be clicked to link
+
+*/
+
+function displaySpecifiedList(listName, listType){
+
+	//part of another method
+	setDefault(listType);
+	
+	//clear out the element to display the list of brands
+	document.getElementById("list").innerHTML = "";
+	//create a new list to be shown
+	var ul = document.getElementById("list");
+	ul.setAttribute("id",	"list");
+	ul.setAttribute("class","brandList");
+	//for each element, on mouse over, run the change information method
+	for (i = 0; i < listName.length;i++){
+		var li = document.createElement("li");
+		var Lidx = listName[i].index;
+		li.setAttribute("id",	"TRUE");
+		li.setAttribute("class", "product");
+		li.setAttribute("onMouseOver","changeInfo('" + Lidx + "')");
+		li.setAttribute("style","cursor: pointer;");
+		li.setAttribute("onClick","setLightInfo(" + Lidx  + ");document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'");
+		li.setAttribute("onMouseOut",li.style.color =  document.body.style.color);
+		li.innerHTML = listName[i].brandName;
+		ul.appendChild(li);
+	
+	}
+
+	/*
+
+	WARNING
+	There is a bug in Chrome when using multiple columns in a list with only one or none element
+	Adding blanks with text included and no clickable functions will prevent this
+	*/
+	for (var i=listName.length; i<2;i++){
+		var li = document.createElement("li");
+		li.setAttribute("id",	"BLANK");
+		li.innerHTML = "BLANK";
+		li.setAttribute("style","color: transparent; background-color: transparent;");
+		ul.appendChild(li);
+	}
+	$("#BLANK").css("background-color","transparent");
+	
+	//add jQuery to the created elements
+	$(".brandList #TRUE").mouseover(function (){
+			$(this).css("background-color", "rgba(60, 60, 60, 0.4)");
+			$(this).css("color","#c85248");
+
+	});
+	$(".brandList #TRUE").mouseout(function (){
+			$(this).css("background-color", "rgba(60, 60, 60, 0.1)");
+			$(this).css("color", document.body.style.color);
+	});
+
+	$("#list").mouseover(function (){	
+		$("#list").mouseout(function (){
+			setDefault(listType);
+
+		});
+	});
+
+
+
+}
+
+//Sets the info for the lightbox
+function setLightInfo(idx){
+	
+	document.getElementById("lightCompanyName").innerHTML = document.getElementById("CompanyName").innerHTML;
+	document.getElementById("lightCompanyInfo").innerHTML = document.getElementById("CompanyInfo").innerHTML;
+	document.getElementById("lightFeaturedProd").src = document.getElementById("featuredProd").src;
+	var ul = document.getElementById("lightProductList");	
+	ul.empty();
+	var brand = brandList[idx];
+
+	for (i = 0; i < brand.productList.length;i++){
+		var li = document.createElement("li");
+		li.setAttribute("onMouseOver", 'document.getElementById("lightFeaturedProd").src =  \"' + brand.productList[i] + '\"');
+		li.setAttribute("class", brand.catagoryList[i]);		
+		li.setAttribute("style","cursor: pointer;");
+		li.innerHTML = brand.productNames[i];
+		li.setAttribute("id",	"TRUE");
+		li.setAttribute('href',brand.productUrls[i]); 
+		ul.appendChild(li);
+	
+	}
+	for (var i=brand.productList.length; i<6;i++){
+		var li = document.createElement("li");
+		li.setAttribute("id",	"BLANK");
+		li.innerHTML = "BLANK";
+		li.setAttribute("style","color: transparent; background-color: transparent;");
+		//li.setAttribute("style","background-color: transparent;");
+		ul.appendChild(li);
+	}
+	
+	$("#lightProductList #TRUE").mouseover(function (){
+		//if($(this).attr("id") != "BLANK"){	
+			$(this).css("background-color", "rgba(60, 60, 60, 0.4)");
+			$(this).css("color","#c85248");
+
+		//}
+	});
+	$("#lightProductList #TRUE").mouseout(function (){
+		//if($(this).attr("id") != "BLANK"){	
+			$(this).css("background-color", "rgba(60, 60, 60, 0.1)");
+			$(this).css("color", document.body.style.color);
+		//}
+	});
+	$("#lightProductList #TRUE").click(function (){
+		if($(this).attr('href') != undefined){
+			location.href=$(this).attr('href');
+		}
+	});
+	
+	//document.getElementById("fade").style.height= $(document).height();
+}
+
+
+//Function to change the information in the lightbox
+function changeInfo(idx){
+	var newInfo = brandList[idx]
+	document.getElementById("listProductList").innerHTML = "";
+	document.getElementById("CompanyInfo").innerHTML = ""; 	
+	document.getElementById("CompanyName").innerHTML = newInfo.brandName;
+	document.getElementById("CompanyInfo").innerHTML += newInfo.brandDesc + "<br>";
+	document.getElementById("CompanyInfo").innerHTML += newInfo.brandLoc + "<br>";
+	document.getElementById("CompanyInfo").innerHTML += newInfo.brandSite + "<br>";
+	changePicture("list",newInfo.productList[0]);
+	var ul = document.getElementById("listProductList");
+	for (var i=0; i < newInfo.productList.length; i++){
+		var li = document.createElement("li");
+		li.innerHTML = newInfo.productNames[i];
+		li.setAttribute("style","cursor: pointer;");
+		li.setAttribute('href',newInfo.productUrls[i]); 
+		ul.appendChild(li);
+		//console.log(newInfo.productNames[i]);
+	}
+	for (var i=newInfo.productList.length; i<2;i++){
+		var li = document.createElement("li");
+		li.setAttribute("id",	"BLANK");
+		li.innerHTML = " ";
+		li.setAttribute("style","background-color: transparent;");
+		ul.appendChild(li);
+	}
+	$("#lightProductList li").click(function (){
+		if($(this).attr('href') != undefined){
+			location.href=$(this).attr('href');
+		}
+	});
+
+}
+
+//function to change the name of the 
+function changeInformation( Lname, desc, loc, site){
+
+	document.getElementById("CompanyInfo").innerHTML = ""; 	
+	document.getElementById("CompanyName").innerHTML = Lname;
+	document.getElementById("CompanyInfo").innerHTML += desc + "<br>";
+	document.getElementById("CompanyInfo").innerHTML += loc + "<br>";
+	document.getElementById("CompanyInfo").innerHTML += site;
+}
+
+function changePicture(type,picture){
+
+	if(type == "defualt"){
+		$("#featuredProd").attr('src', picture);
+	}
+	else{
+		$("#featuredProd").attr('src', picture);
+	}
+
+}
+
+</script>
+
+
+
+</head>
+
+<body>
+<br />
+    <div id="light" class="white-banner shop-page">
+	<div class="left">
+		<h1 class="ruled" id="lightCompanyName"></h1>
+		<p id ="lightCompanyInfo"> </p>
+		Broquets using this company's products:
+		<ul id="lightProductList">
+		</ul>
+		<div id="closer">
+		 <a  style="cursor: pointer;" href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">Close</a></div>
+	</div>
+		<div class="right">    
+			<img id="lightFeaturedProd" src="//cdn.shopify.com/s/files/1/0136/2242/products/ImperialSafety1_large.jpg?v=1381509963" alt="The Colonial"/>	
+        </div>
+
+    
+  </div>
+    <div id="fade" class="black_overlay"onclick = "document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'"></div>
+
+
+
+
+<div id="brandPage" class="white-banner shop-page">
+	<div id="leftSide" class="left">
+		<h1 class="ruled" id="CompanyName"></h1>
+		<p id ="CompanyInfo"> </p>
+		<ul id="listProductList">
+		</ul>
+	</div>
+	<div id="rightSide" class="right">    
+			<img id="featuredProd" src="//cdn.shopify.com/s/files/1/0136/2242/products/ImperialSafety1_large.jpg?v=1381509963" alt="The Colonial"/>	
+        </div>
+</div>
+
+<div class="shop-menu">
+	<div id="shop-options" class="container">
+	<ul>
+		<li  style="cursor: pointer;" onclick="displaySpecifiedList(brandList, 'allList')"><a><span class="all"></span><span class="text">All<br />Brands</span></a></li>
+		<li  style="cursor: pointer;" onclick="displaySpecifiedList(genList, 'genList')"><a><span class="general"></span><span class="text">General<br />Store</span></a></li>
+		<li  style="cursor: pointer;" onclick="displaySpecifiedList(foodList, 'foodList')"><a><span class="grilling"></span><span class="text">Man Food +<br />Grilling</span></a></li>
+		<li  style="cursor: pointer;" onclick="displaySpecifiedList(drinkList, 'drinkList')"><a><span class="bar"></span><span class="text">Drinking<br />Gear</span></a></li>
+		<li  style="cursor: pointer;" onclick="displaySpecifiedList(outList, 'outList')"><a><span class="gear"></span><span class="text">Outdoor +<br />Tools</span></a></li>
+		<li  style="cursor: pointer;" onclick="displaySpecifiedList(groomList, 'groomList')"><a><span class="shaving"></span><span class="text">Grooming +<br />Accessories</span></a></li>
+	</ul>
+	</div>
+</div>
+	<ul id="list" class="brandList">
+	<li>start</li>
+	<ul></ul>
+	</ul>
+
+<script type="text/javascript">// <![CDATA[
+displaySpecifiedList(brandList, 'allList');
+// ]]></script>
+
+</body>
+
+
+</html>
+
+
+
+
+
+
+
+
+

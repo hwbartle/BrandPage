@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+
+<link href="//cdn.shopify.com/s/files/1/0136/2242/t/68/assets/stylesheet.css?55795" rel="stylesheet" type="text/css"  media="all"  />
+<link href="//cdn.shopify.com/s/files/1/0136/2242/t/68/assets/font.css?55795" rel="stylesheet" type="text/css"  media="all"  />
+
+<script src="http://cdn.jquerytools.org/1.2.6/full/jquery.tools.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" type="text/javascript"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js" type="text/javascript"></script>
+<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/le-frog/jquery-ui.css" rel="stylesheet" type="text/css" media="screen">
+<link href="http://jquerytools.github.io/media/css/tabs.css" rel="stylesheet" type="text/css" media="screen">
+
+    <style>
+       .black_overlay{
+        display: none;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 185%;
+        background-color: black;
+        z-index:1001;
+        -moz-opacity: 0.8;
+        opacity:.80;
+        filter: alpha(opacity=80);
+    }
+    #light {
+
+	 position: fixed;
+  	  top: 32%;
+   	 left: 50%;
+   	 -webkit-transform: translate(-50%, -32%);
+    	transform: translate(-50%, -32%);
+        display: none;
+        width: none;
+        height: auto;
+	max-width: 1000px;
+        padding: 16px;
+        border: 8px solid black;
+        background: url(http://cdn.shopify.com/s/files/1/0136/2242/t/68/assets/subtle_grunge.png);
+        z-index:1002;
+        overflow: auto;
+    }
+
+
+
+
+#list,#listProductList, #lightProductList{
+	 list-style-type: none;
+	padding: 20px;
+	-webkit-column-break: avoid;
+	-webkit-column-break-inside: avoid;
+	
+}
+#listProductList, #lightProductList{
+	margin-top: 8px;
+	margin-bottom: 8px;
+	padding: 10px;
+}
+#lightProductList,#listProductList {
+    -webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    column-count: 2;
+    
+    -webkit-column-break: avoid;
+    -webkit-column-break-inside: avoid;
+    
+    -webkit-column-gap: 20px; /* Chrome, Safari, Opera */
+    -moz-column-gap: 20px; /* Firefox */
+    column-gap: 20px;
+    padding-left: 0px;
+}
+#lightFeaturedProd{	
+	width: 100%;
+	height: 90%;
+	margin-top: 4%;
+	margin-right: 4%;
+	max-width: 500px;
+}
+#featuredProd{
+	margin-top: 7%;	
+	margin-bottom: 7%;	
+	max-width: 350px;
+	max-height: 300px;
+}
+
+#brandPage{
+	margin-top: 15px;
+	margin-bottom: 15px;
+	
+}
+.brandList {
+  columns: 3;
+  -webkit-columns: 3;
+  -moz-columns: 3;
+}
+#brandPage,
+#brandPage:before,
+#brandPage:after {
+	height:auto;
+  	width: none;
+	min-height: 340px;
+}
+
+#leftSide,
+#leftSide:before,
+#leftSide:after {
+	width: 65%
+	margin: 1px;
+}
+
+#rightSide,
+#rightSide:before,
+#rightSide:after {
+	width: 65%;
+	margin: 1px;
+	max-width: 370px;
+	max-height: 275px;
+
+}
+#CompanyInfo{
+	margin-top: 8px;
+	margin-bottom: 8px;
+
+}
+
+
+#list li, #listProductList li,  #lightProductList li{
+	-webkit-column-break-inside: avoid;
+        -webkit-column-break: avoid;
+	background-color: rgba(60, 60, 60, 0.1);
+	border-color: rgba(60, 60, 60, 0.1);
+	border-width: 4px;
+	margin: 2px;
+	text-align: center;
+	display: block;
+}
+
+#list{
+	margin:0px;
+}
+
+#closer{
+	position: absolute;
+	bottom: 10px;
+}
+.shop-menu{
+	background-color: transparent;
+}
+#shop-options{
+	max-width: inherit !important;
+	width: 100%;
+}
+</style>
+
+<script type="text/javascript">
+
+var brandList = new Array();
+function Brand (idx, bName, desc, loc, site, cata, products, producturls, productpics) {
+	this.index = idx;	
+	this.brandName = bName;
+	this.brandDesc = desc;
+	this.brandLoc = loc;
+	this.brandSite = site;	
+	this.catagoryList = cata;
+	this.productNames = products;
+	this.productUrls = producturls;
+	this.productList = productpics;
+	brandList.push(this);
+}
+
+// anti-pattern! keep reading...
+function getBrandInfo() {
+
+}
+
+function contains(a, obj) {
+    var i = a.length;
+    while (i--) {
+       if (a[i] === obj) {
+           return true;
+       }
+    }
+    return false;
+}
+
+//Brand Objects go here! PASTE CODE BELOW THIS LINE
+
+//PASTED CODE GOES ABOVE HERE
+
+
+
+var foodList = new Array();
+var groomList = new Array();
+var drinkList = new Array();
+var outList = new Array();
+var genList = new Array();
+
+
+
+brandList.forEach(function(entry) {
+	if (contains(entry.catagoryList, "Food") == true){
+		foodList.push(entry);		
+	}
+	if (contains(entry.catagoryList, "Drink") == true){
+		drinkList.push(entry);		
+	}
+	if (contains(entry.catagoryList, "Groom") == true){
+		groomList.push(entry);		
+	}
+	if (contains(entry.catagoryList, "Out") == true){
+		outList.push(entry);		
+	}
+	if (contains(entry.catagoryList, "General") == true){
+		genList.push(entry);		
+	}
+});
+
+
+
+function setDefault(type){
+	document.getElementById("listProductList").innerHTML = "";
+	if(type == "allList"){
+		changeInformation( "Our Vendors", "We scour the country for sweet brands that make everything from portable bacon to titanium sporks.", " Interested in becoming a partner? Talk to Max. <a href='mailto:max@broquet.co'>[max@broquet.co]</a>", "");
+		changePicture("defualt","//cdn.shopify.com/s/files/1/0136/2242/t/68/assets/shop-box.png?55838");
+	}
+	if(type == "foodList"){
+		changeInformation( "Man Food and Grilling", "Here’s to bacon-wrapped bacon. Here’s to knowing the difference between medium and medium rare. Here’s to never learning how to pronounce “quinoa”.", "Our Man Food shop features bacon chocolate, bourbon maple barbecue sauce, and everything in between.", "");
+		changePicture("defualt","//cdn.shopify.com/s/files/1/0136/2242/t/68/assets/GrillingDogShop.jpg?55856");
+	}
+	if(type == "drinkList"){
+		changeInformation( "Drinking Gear", "Do you know a guy who’s ordered a vodka cranberry at any point in the last 6 months? How about one that when presented with the option, would select a Bud Light Lime over a classic Bud Heavy?", "It’s time to have an intervention. Or better yet, let one of our manly cocktail Broquets do the talking.", "");
+		changePicture("defualt","//cdn.shopify.com/s/files/1/0136/2242/t/68/assets/CocktailShop.jpg?55856");
+	}
+	if(type == "outList"){
+		changeInformation( "Outdoors and Tools", "Some guys like to get out in the wilderness, throw their phone in the creek, and forget how to talk to other humans for a while. Some guys like to spend 12 hours straight in their garage trying to build a functioning trebuchet out of old 2x4’s and scrap metal.", "Whatever he’s in to, we’ve got the outdoor supplies, tools, and sports gear to up his game.", "");
+		changePicture("defualt","//cdn.shopify.com/s/files/1/0136/2242/t/68/assets/WoodChoppingShop.jpg?55856");
+	}
+	if(type == "groomList"){
+		changeInformation( "Grooming and Accessories", "If you’re looking for a 12-blade vibrating razor or a fancy little lapel flower, you’ll probably want to turn around now.", "Our Gentleman’s Shop ditches the over-featured, over-styled stuff in favor of American made grooming gear and accessories that are high quality, expertly designed and just work. Check out one of our Broquets, or grab some sweet accessories or grooming supplies on their own.", "");
+		changePicture("defualt","//cdn.shopify.com/s/files/1/0136/2242/t/68/assets/AxeShavingShop.jpg?55856");
+	}
+	
+	if(type == "genList"){
+		changeInformation( "The General Store", "We love the brands we work with, so we wanted to individually highlight some of our favorite products. Here you can find a wide assortment of awesomeness, ranging from axes to wallets to cocktail kits.", "Whatever you choose, we know he'll be stoked to receive it.");
+		changePicture("defualt","//cdn.shopify.com/s/files/1/0136/2242/t/68/assets/GeneralStore.jpg?56073");
+	}
+}
+
+
+
+
+
+
+/*
+Method to display the desired list based on the button clicks
+each displayed company can be clicked to link
+
+*/
+
+function displaySpecifiedList(listName, listType){
+
+	//part of another method
+	setDefault(listType);
+	
+	//clear out the element to display the list of brands
+	document.getElementById("list").innerHTML = "";
+	//create a new list to be shown
+	var ul = document.getElementById("list");
+	ul.setAttribute("id",	"list");
+	ul.setAttribute("class","brandList");
+	//for each element, on mouse over, run the change information method
+	for (i = 0; i < listName.length;i++){
+		var li = document.createElement("li");
+		var Lidx = listName[i].index;
+		li.setAttribute("id",	"TRUE");
+		li.setAttribute("class", "product");
+		li.setAttribute("onMouseOver","changeInfo('" + Lidx + "')");
+		li.setAttribute("style","cursor: pointer;");
+		li.setAttribute("onClick","setLightInfo(" + Lidx  + ");document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'");
+		li.setAttribute("onMouseOut",li.style.color =  document.body.style.color);
+		li.innerHTML = listName[i].brandName;
+		ul.appendChild(li);
+	
+	}
+	for (var i=listName.length; i<2;i++){
+		var li = document.createElement("li");
+		li.setAttribute("id",	"BLANK");
+		li.innerHTML = "BLANK";
+		li.setAttribute("style","color: transparent; background-color: transparent;");
+		ul.appendChild(li);
+	}
+	$("#BLANK").css("background-color","transparent");
+	$(".brandList #TRUE").mouseover(function (){
+		//if($(this).attr("id") != "BLANK"){	
+			$(this).css("background-color", "rgba(60, 60, 60, 0.4)");
+			$(this).css("color","#c85248");
+
+		//}
+	});
+	$(".brandList #TRUE").mouseout(function (){
+		//if($(this).attr("id") != "BLANK"){	
+			$(this).css("background-color", "rgba(60, 60, 60, 0.1)");
+			$(this).css("color", document.body.style.color);
+		//}
+	});
+
+	$("#list").mouseover(function (){	
+		$("#list").mouseout(function (){
+			setDefault(listType);
+
+		});
+	});
+
+
+
+}
+
+
+function setLightInfo(idx){
+	
+	document.getElementById("lightCompanyName").innerHTML = document.getElementById("CompanyName").innerHTML;
+	document.getElementById("lightCompanyInfo").innerHTML = document.getElementById("CompanyInfo").innerHTML;
+	document.getElementById("lightFeaturedProd").src = document.getElementById("featuredProd").src;
+	var ul = document.getElementById("lightProductList");	
+	ul.empty();
+	var brand = brandList[idx];
+
+	for (i = 0; i < brand.productList.length;i++){
+		var li = document.createElement("li");
+		li.setAttribute("onMouseOver", 'document.getElementById("lightFeaturedProd").src =  \"' + brand.productList[i] + '\"');
+		li.setAttribute("class", brand.catagoryList[i]);		
+		li.setAttribute("style","cursor: pointer;");
+		li.innerHTML = brand.productNames[i];
+		li.setAttribute("id",	"TRUE");
+		li.setAttribute('href',brand.productUrls[i]); 
+		ul.appendChild(li);
+	
+	}
+	for (var i=brand.productList.length; i<6;i++){
+		var li = document.createElement("li");
+		li.setAttribute("id",	"BLANK");
+		li.innerHTML = "BLANK";
+		li.setAttribute("style","color: transparent; background-color: transparent;");
+		//li.setAttribute("style","background-color: transparent;");
+		ul.appendChild(li);
+	}
+	
+	$("#lightProductList #TRUE").mouseover(function (){
+		//if($(this).attr("id") != "BLANK"){	
+			$(this).css("background-color", "rgba(60, 60, 60, 0.4)");
+			$(this).css("color","#c85248");
+
+		//}
+	});
+	$("#lightProductList #TRUE").mouseout(function (){
+		//if($(this).attr("id") != "BLANK"){	
+			$(this).css("background-color", "rgba(60, 60, 60, 0.1)");
+			$(this).css("color", document.body.style.color);
+		//}
+	});
+	$("#lightProductList #TRUE").click(function (){
+		if($(this).attr('href') != undefined){
+			location.href=$(this).attr('href');
+		}
+	});
+	
+	//document.getElementById("fade").style.height= $(document).height();
+}
+	
+function changeInfo(idx){
+	var newInfo = brandList[idx]
+	document.getElementById("listProductList").innerHTML = "";
+	document.getElementById("CompanyInfo").innerHTML = ""; 	
+	document.getElementById("CompanyName").innerHTML = newInfo.brandName;
+	document.getElementById("CompanyInfo").innerHTML += newInfo.brandDesc + "<br>";
+	document.getElementById("CompanyInfo").innerHTML += newInfo.brandLoc + "<br>";
+	document.getElementById("CompanyInfo").innerHTML += newInfo.brandSite + "<br>";
+	changePicture("list",newInfo.productList[0]);
+	var ul = document.getElementById("listProductList");
+	for (var i=0; i < newInfo.productList.length; i++){
+		var li = document.createElement("li");
+		li.innerHTML = newInfo.productNames[i];
+		li.setAttribute("style","cursor: pointer;");
+		li.setAttribute('href',newInfo.productUrls[i]); 
+		ul.appendChild(li);
+		//console.log(newInfo.productNames[i]);
+	}
+	for (var i=newInfo.productList.length; i<2;i++){
+		var li = document.createElement("li");
+		li.setAttribute("id",	"BLANK");
+		li.innerHTML = " ";
+		li.setAttribute("style","background-color: transparent;");
+		ul.appendChild(li);
+	}
+	$("#lightProductList li").click(function (){
+		if($(this).attr('href') != undefined){
+			location.href=$(this).attr('href');
+		}
+	});
+
+}
+
+
+function changeInformation( Lname, desc, loc, site){
+
+	document.getElementById("CompanyInfo").innerHTML = ""; 	
+	document.getElementById("CompanyName").innerHTML = Lname;
+	document.getElementById("CompanyInfo").innerHTML += desc + "<br>";
+	document.getElementById("CompanyInfo").innerHTML += loc + "<br>";
+	document.getElementById("CompanyInfo").innerHTML += site;
+}
+
+function changePicture(type,picture){
+
+	if(type == "defualt"){
+		$("#featuredProd").attr('src', picture);
+	}
+	else{
+		$("#featuredProd").attr('src', picture);
+	}
+
+}
+
+</script>
+
+
+
+</head>
+
+<body>
+<br />
+    <div id="light" class="white-banner shop-page">
+	<div class="left">
+		<h1 class="ruled" id="lightCompanyName"></h1>
+		<p id ="lightCompanyInfo"> </p>
+		Broquets using this company's products:
+		<ul id="lightProductList">
+		</ul>
+		<div id="closer">
+		 <a  style="cursor: pointer;" href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">Close</a></div>
+	</div>
+		<div class="right">    
+			<img id="lightFeaturedProd" src="//cdn.shopify.com/s/files/1/0136/2242/products/ImperialSafety1_large.jpg?v=1381509963" alt="The Colonial"/>	
+        </div>
+
+    
+  </div>
+    <div id="fade" class="black_overlay"onclick = "document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'"></div>
+
+
+
+
+<div id="brandPage" class="white-banner shop-page">
+	<div id="leftSide" class="left">
+		<h1 class="ruled" id="CompanyName"></h1>
+		<p id ="CompanyInfo"> </p>
+		<ul id="listProductList">
+		</ul>
+	</div>
+	<div id="rightSide" class="right">    
+			<img id="featuredProd" src="//cdn.shopify.com/s/files/1/0136/2242/products/ImperialSafety1_large.jpg?v=1381509963" alt="The Colonial"/>	
+        </div>
+</div>
+
+<div class="shop-menu">
+	<div id="shop-options" class="container">
+	<ul>
+		<li  style="cursor: pointer;" onclick="displaySpecifiedList(brandList, 'allList')"><a><span class="all"></span><span class="text">All<br />Brands</span></a></li>
+		<li  style="cursor: pointer;" onclick="displaySpecifiedList(genList, 'genList')"><a><span class="general"></span><span class="text">General<br />Store</span></a></li>
+		<li  style="cursor: pointer;" onclick="displaySpecifiedList(foodList, 'foodList')"><a><span class="grilling"></span><span class="text">Man Food +<br />Grilling</span></a></li>
+		<li  style="cursor: pointer;" onclick="displaySpecifiedList(drinkList, 'drinkList')"><a><span class="bar"></span><span class="text">Drinking<br />Gear</span></a></li>
+		<li  style="cursor: pointer;" onclick="displaySpecifiedList(outList, 'outList')"><a><span class="gear"></span><span class="text">Outdoor +<br />Tools</span></a></li>
+		<li  style="cursor: pointer;" onclick="displaySpecifiedList(groomList, 'groomList')"><a><span class="shaving"></span><span class="text">Grooming +<br />Accessories</span></a></li>
+	</ul>
+	</div>
+</div>
+	<ul id="list" class="brandList">
+	<li>start</li>
+	<ul></ul>
+	</ul>
+
+<script type="text/javascript">// <![CDATA[
+displaySpecifiedList(brandList, 'allList');
+// ]]></script>
+
+</body>
+
+
+</html>
+
+
+
+
+
+
+
+
+
